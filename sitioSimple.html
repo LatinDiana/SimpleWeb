@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SimpleWeb</title>
+  </head>
+  <body>
+    <div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+// Or you can replace latest with a specific version
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "es"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5500",
+    socketPath: "/socket.io/",
+    title: "Rosedal Flores",
+    subtitle: "Soy el asistente de Rosedal Flores",
+  })
+</script>
+
+  </body>
+</html>
